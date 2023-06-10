@@ -1,0 +1,12 @@
+.btn{
+    background-color: var(--lila);
+    border: 1px dashed var(--lila);
+    padding:var(--space);
+    display:block;
+    cursor: pointer;
+    flex: 50%;
+}
+
+.btn:hover{
+    filter: var(--hover-filter);
+}

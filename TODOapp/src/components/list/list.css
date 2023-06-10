@@ -1,0 +1,18 @@
+.list{
+    background-color:var(--grayer);
+    height:60vh;
+    width: calc(100vw - var(--space-xl));
+    padding:0px;
+    list-style: none;
+
+}
+
+.list__item{
+    border-top: 1px dashed var(--lime);
+    padding: var(--space-xl);
+    text-align: center;
+}
+
+.list__item:last-of-type {
+    border-bottom: 1px dashed var(--lime);
+}
