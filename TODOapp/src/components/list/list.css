@@ -1,7 +1,7 @@
 .list{
     background-color:var(--grayer);
     height:60vh;
-    width: calc(100vw - var(--space-xl));
+    width: calc(100% - var(--space-xl));
     padding:0px;
     list-style: none;
 
