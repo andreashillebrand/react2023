@@ -7,8 +7,8 @@ export default function ToDoApp(){
 
   const [jobs, setJobs] = useState("");
   
-  const btnTextAdd:String = "Add ToDo";
-  const btnTextDel:String = "Remove ToDos";
+  const btnTextAdd:string = "Add ToDo";
+  const btnTextDel:string = "Remove ToDos";
 
   const addJob:VoidFunction = () => {
     setJobs("Something to do");
@@ -23,8 +23,8 @@ export default function ToDoApp(){
         <List listContent={jobs}  />
         
         <div className="todo__buttons">
-          <Button text={btnTextAdd} click_fn={addJob}/>
-          <Button text={btnTextDel} click_fn={deleteJobs}/>
+          <Button text={btnTextAdd} click_fn={addJob} aria="add" />
+          <Button text={btnTextDel} click_fn={deleteJobs} aria="delete" />
         </div>
         
       </section>

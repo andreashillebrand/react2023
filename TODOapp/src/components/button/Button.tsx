@@ -2,12 +2,13 @@ import { useEffect } from "react";
 import "./button.css"
 
 interface ButtonProps {
-    text: String;
+    text: string;
     click_fn: VoidFunction;
+    aria: string;
 }
 
 export default function Button(props: ButtonProps) {
-    let text:String = "click me";
+    let text:string = "click me";
     let handleClick:VoidFunction = () => {
         console.log("-> Button: clic in Button");
     }
@@ -26,6 +27,7 @@ export default function Button(props: ButtonProps) {
         <button 
             className="btn" 
             onClick={ handleClick }
+            aria-label={props.aria}
         >
             {text}
         </button>
