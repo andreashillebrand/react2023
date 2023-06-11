@@ -1,3 +1,4 @@
+import "../../assets/settings.css";
 import "./list.css";
 
 interface ListProps {

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-import "./button.css"
+import "../../assets/settings.css";
+import "./button.css";
 
 interface ButtonProps {
     text: string;
