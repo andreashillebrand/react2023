@@ -1,17 +1,17 @@
-.todo{
+.uic-todo-app{
     color: var(--white);
     background-color: var(--gray);
     display:flex;
     justify-content:space-around;
     align-items: center;
     flex-direction: column;
-    height:100vh;
+    height:100%;
     max-width: 540px;
     margin: 0 auto;
     
 }
 
-.todo__buttons{
+.uic-todo-app__buttons{
     display:flex;
     justify-content:space-evenly;
     align-items: center;

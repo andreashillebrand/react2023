@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "../../components/button/Button";
 import List from "../../components/list/list";
-import './todo-app.css'
+import './todo-app.css';
 
 export default function ToDoApp(){
 
@@ -18,11 +18,11 @@ export default function ToDoApp(){
   }
   
   return (
-      <section className="todo">
+      <section className="uic-todo-app">
         <h1>ToDo App</h1>
         <List listContent={jobs}  />
         
-        <div className="todo__buttons">
+        <div className="uic-todo-app__buttons">
           <Button text={btnTextAdd} click_fn={addJob} aria="add" />
           <Button text={btnTextDel} click_fn={deleteJobs} aria="delete" />
         </div>
