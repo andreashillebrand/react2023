@@ -1,20 +1,51 @@
-import './app.css';
-import ToDoApp from '../ToDoApp/ToDoApp'
-import FormOne from '../FormOne/FormOne'
-export default function App(){
-    
-    const d = new Date();
+import { useEffect, useState } from "react";
+import { Outlet, Link, useLocation } from "react-router-dom";
+import Button from "../../components/button/Button";
 
+import './app.css';
+
+export default function App(){
+
+    const [navi, setNavi] = useState("hidden");
+
+    const location = useLocation();
+    const date = new Date();
+
+    const openMenu:VoidFunction = () => {
+        setNavi("open");
+    }
+
+    const closeMenu:VoidFunction = () => {
+        setNavi("hidden");
+    }
+
+    useEffect(() => {
+        closeMenu();
+    }, [location]);
     
     return (
-        <>
-        <header className="header">menu</header>
-        <main className="main">
-           
-            <FormOne />
+        <div className="app">
+            <header className="app__header">
+                <Button text={"MENU"} click_fn={openMenu} aria="open menu" />
+               
+                <nav className={`app__menu ${navi === 'open' ? 'app__menu--open' : ''}`}>
+                    <Button text={"MENU"} click_fn={closeMenu} aria="close menu" />
+                    <ul >
+                        <li>
+                        <Link to="/">Home</Link>
+                        <Link to="/todo-app">ToDo App</Link>
+                        <Link to="/form-one">Form One</Link>
+                        </li>
+                    </ul>
+                 </nav>
             
-        </main>
-        <footer className="footer">Andreas Hillebrand {d.getFullYear()} </footer>
-        </>
+            </header>
+            <main className="app__main">
+                <Outlet />
+            </main>
+            
+            <footer className="app__footer">Andreas Hillebrand {date.getFullYear()} </footer>
+           
+        </div>
     )
 }

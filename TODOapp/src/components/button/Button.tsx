@@ -11,7 +11,7 @@ interface ButtonProps {
 export default function Button(props: ButtonProps) {
     let text:string = "click me";
     let handleClick:VoidFunction = () => {
-        console.log("-> Button: clic in Button");
+        //console.log("-> Button: clic in Button");
     }
 
     if(props.click_fn && props.text){
@@ -20,8 +20,8 @@ export default function Button(props: ButtonProps) {
     }
     
     useEffect(() => {
-        console.log("-> Button: Button rendered");
-        console.log("-> Button props:", props);
+        //console.log("-> Button: Button rendered");
+        //console.log("-> Button props:", props);
     });
     
     return (
