@@ -1,0 +1,10 @@
+.uic-home{
+    /* background-image: url(../../assets/img/me.PNG); */
+    background-size:cover;
+    background-position:0 center;
+    background-repeat: no-repeat;
+
+    
+    height:100%;
+
+}

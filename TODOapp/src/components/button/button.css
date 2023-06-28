@@ -1,10 +1,12 @@
 .btn{
-    background-color: var(--lila);
-    border: 1px dashed var(--lila);
+    background-color: var(--white);
+    border: 1px solid var(--grayer);
     padding:var(--space);
     display:block;
     cursor: pointer;
     flex: 50%;
+    color:var( --grayer);
+    border-radius: 4px;
 }
 
 .btn:hover{

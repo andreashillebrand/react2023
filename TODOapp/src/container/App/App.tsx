@@ -26,16 +26,14 @@ export default function App(){
     return (
         <div className="app">
             <header className="app__header">
-                <Button text={"MENU"} click_fn={openMenu} aria="open menu" />
+                <Button text={"menu"} click_fn={openMenu} aria="open menu" />
                
                 <nav className={`app__menu ${navi === 'open' ? 'app__menu--open' : ''}`}>
-                    <Button text={"MENU"} click_fn={closeMenu} aria="close menu" />
-                    <ul >
-                        <li>
-                        <Link to="/">Home</Link>
-                        <Link to="/todo-app">ToDo App</Link>
-                        <Link to="/form-one">Form One</Link>
-                        </li>
+                    <Button text={"X"} click_fn={closeMenu} aria="close menu" />
+                    <ul className="app__menu-links">
+                        <li className="app__menu-link"><Link to="/" >HOME</Link></li>
+                        <li className="app__menu-link"><Link to="/todo-app">TODO APP</Link></li>
+                        <li className="app__menu-link"><Link to="/form-one">FORM ONE</Link></li>
                     </ul>
                  </nav>
             
@@ -44,7 +42,7 @@ export default function App(){
                 <Outlet />
             </main>
             
-            <footer className="app__footer">Andreas Hillebrand {date.getFullYear()} </footer>
+            <footer className="app__footer">&copy; andreas hillebrand {date.getFullYear()} </footer>
            
         </div>
     )

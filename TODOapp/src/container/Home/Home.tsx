@@ -1,10 +1,11 @@
 
 import './home.css';
 
+
 export default function Home(){
     
     return (
-        <section className="uic-form-one">
+        <section className="uic-home">
             H I !
 
         
