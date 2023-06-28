@@ -1,4 +1,12 @@
 .uic-form-one{
     padding:var(--space-xxl);
     text-align: center;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.8), 
+        rgba(0, 0, 8, 0.9)
+    );
+    @media (min-width: 600px) {
+        padding:2rem;
+        height:100vh;
+    }
 }

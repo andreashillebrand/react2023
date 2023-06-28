@@ -19,12 +19,14 @@ export default function ToDoApp(){
   
   return (
       <section className="uic-todo-app">
-        <h1>ToDo App</h1>
-        <List listContent={jobs}  />
-        
-        <div className="uic-todo-app__buttons">
-          <Button text={btnTextAdd} click_fn={addJob} aria="add" />
-          <Button text={btnTextDel} click_fn={deleteJobs} aria="delete" />
+        <div className="uic-todo-app__wrapper">
+          <h1>ToDo App</h1>
+          <List listContent={jobs}  />
+          
+          <div className="uic-todo-app__buttons">
+            <Button text={btnTextAdd} click_fn={addJob} aria="add" cssClass={""} />
+            <Button text={btnTextDel} click_fn={deleteJobs} aria="delete" cssClass={""} />
+          </div>
         </div>
         
       </section>

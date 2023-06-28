@@ -6,6 +6,7 @@ interface ButtonProps {
     text: string;
     click_fn: VoidFunction;
     aria: string;
+    cssClass:string;
 }
 
 export default function Button(props: ButtonProps) {
@@ -18,6 +19,10 @@ export default function Button(props: ButtonProps) {
         text = props.text;
         handleClick = props.click_fn;
     }
+
+    const css = `btn ${props.cssClass}`;
+
+
     
     useEffect(() => {
         //console.log("-> Button: Button rendered");
@@ -26,9 +31,10 @@ export default function Button(props: ButtonProps) {
     
     return (
         <button 
-            className="btn" 
+            className={css}
             onClick={ handleClick }
             aria-label={props.aria}
+            
         >
             {text}
         </button>

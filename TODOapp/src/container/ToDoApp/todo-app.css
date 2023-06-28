@@ -1,14 +1,26 @@
 .uic-todo-app{
     color: var(--font-color);
-    background-color: var(--bg-color);
+    height:100vh;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.8), 
+        rgba(0, 0, 8, 0.9)
+    );
+    @media (min-width: 600px) {
+        padding:2rem;
+    }
+}
+
+.uic-todo-app__wrapper{
+    background-color: black;
+    width:100%;
+    max-width:768px;
     display:flex;
     justify-content:space-around;
     align-items: center;
     flex-direction: column;
-    height:100%;
-    max-width: 540px;
+    height: 100vh;
+    padding:2rem;
     margin: 0 auto;
-    
 }
 
 .uic-todo-app__buttons{

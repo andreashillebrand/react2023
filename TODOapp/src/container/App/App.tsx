@@ -26,7 +26,7 @@ export default function App(){
     return (
         <div className="app">
             <header className="app__header">
-                <Button text={"menu"} click_fn={openMenu} aria="open menu" />
+                <Button text={"menu"} click_fn={openMenu} aria="open menu" cssClass="app__menu-btn" />
                
                 <nav className={`app__menu ${navi === 'open' ? 'app__menu--open' : ''}`}>
                     <Button text={"X"} click_fn={closeMenu} aria="close menu" />
