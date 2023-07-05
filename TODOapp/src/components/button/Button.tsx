@@ -3,20 +3,20 @@ import "../../assets/settings.css";
 import "./button.css";
 
 interface ButtonProps {
-    text: string;
+   
     click_fn: VoidFunction;
     aria: string;
     cssClass:string;
+    children: JSX.Element;
 }
 
 export default function Button(props: ButtonProps) {
-    let text:string = "click me";
+   
     let handleClick:VoidFunction = () => {
-        //console.log("-> Button: clic in Button");
+        console.log("fn handleClick UIC Button");
     }
 
-    if(props.click_fn && props.text){
-        text = props.text;
+    if(props.click_fn){
         handleClick = props.click_fn;
     }
 
@@ -30,13 +30,8 @@ export default function Button(props: ButtonProps) {
     });
     
     return (
-        <button 
-            className={css}
-            onClick={ handleClick }
-            aria-label={props.aria}
-            
-        >
-            {text}
+        <button className={css} onClick={ handleClick } aria-label={props.aria}>
+            {props.children}
         </button>
     );
 }

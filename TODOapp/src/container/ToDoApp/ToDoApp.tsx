@@ -1,31 +1,37 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../../components/button/Button";
 import List from "../../components/list/list";
+import Modal from "../../components/modal/modal";
 import './todo-app.css';
 
-export default function ToDoApp(){
 
+export default function ToDoApp(){
+ ;
+  console.log("www");
   const [jobs, setJobs] = useState("");
   
   const btnTextAdd:string = "Add ToDo";
   const btnTextDel:string = "Remove ToDos";
 
-  const addJob:VoidFunction = () => {
-    setJobs("Something to do");
+  const addToDo:VoidFunction = () => {
+    setJobs("There is Something to do!");
   }
-  const deleteJobs  = () => {
+
+  const deleteJobs = () => {
     setJobs("");
   }
   
   return (
       <section className="uic-todo-app">
+        
         <div className="uic-todo-app__wrapper">
           <h1>ToDo App</h1>
           <List listContent={jobs}  />
           
           <div className="uic-todo-app__buttons">
-            <Button text={btnTextAdd} click_fn={addJob} aria="add" cssClass={""} />
-            <Button text={btnTextDel} click_fn={deleteJobs} aria="delete" cssClass={""} />
+            
+            <Modal containerId="todo-modal" modal_fn={addToDo}/>
+            <Button click_fn={deleteJobs} aria="delete" cssClass={""} ><span>{btnTextDel}</span></Button>
           </div>
         </div>
         

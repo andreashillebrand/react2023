@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Outlet, Link, useLocation } from "react-router-dom";
 import Button from "../../components/button/Button";
+import { RiMenuLine } from "react-icons/ri";
+import { AiOutlineClose } from "react-icons/ai";
 
 import './app.css';
 
@@ -26,10 +28,16 @@ export default function App(){
     return (
         <div className="app">
             <header className="app__header">
-                <Button text={"menu"} click_fn={openMenu} aria="open menu" cssClass="app__menu-btn" />
+                <Button click_fn={openMenu} aria="open menu" cssClass="app__menu-btn">
+                    <RiMenuLine />
+                </Button>
                
                 <nav className={`app__menu ${navi === 'open' ? 'app__menu--open' : ''}`}>
-                    <Button text={"X"} click_fn={closeMenu} aria="close menu" />
+                    
+                    <Button click_fn={closeMenu} aria="close menu" cssClass={"app__menu-btn"} >
+                        <AiOutlineClose />
+                    </Button>
+
                     <ul className="app__menu-links">
                         <li className="app__menu-link"><Link to="/" >HOME</Link></li>
                         <li className="app__menu-link"><Link to="/todo-app">TODO APP</Link></li>

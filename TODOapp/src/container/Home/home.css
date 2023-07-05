@@ -1,1 +1,9 @@
-/* .uic-home{} */
+.uic-home{
+    padding:var(--space-xxl);
+    text-align: center;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.6), 
+        rgba(0, 0, 8, 0.9)
+    );
+    height:100vh;
+}

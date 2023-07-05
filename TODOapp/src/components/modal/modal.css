@@ -1,0 +1,50 @@
+.uic-modal {
+    position: fixed;
+    top:0px;
+    left:0px;
+    z-index: 0;
+    height:100vh;
+    width:100vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    overflow:hidden;
+    transform: translateY(-100vh);
+}
+
+.uic-modal--open {
+    transform: translateY(0);
+    transition: all 0.4s ease-out;
+    z-index: 100;
+}
+
+.uic-modal__close-btn {
+    position:absolute;
+    top:10px;
+    left:10px;
+}
+
+.uic-modal__moda-fn-btn {
+    flex: none;
+}
+
+.uic-modal__container {
+    padding: 2rem;
+    margin:2rem;
+    background-color:rgba(0, 0, 0, 0.8);
+    height:calc(100vh - 6rem);
+    width:100vw;
+    justify-content: center;
+    align-items: center;
+    display:flex;
+}
+
+.uic-modal__inpubox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 127px;
+    margin-bottom: 20vh;
+}

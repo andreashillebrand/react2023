@@ -9,15 +9,38 @@
     border-radius: 4px;
 }
 
-.btn:hover{
-    filter: var(--hover-filter);
+.app__header .btn:hover{
+    opacity: 0.5;
+    color:var(--black);
+    transition: opacity 0.2s;
 }
 
 .app__menu .btn{
+    background-color:transparent;
     flex:none;
-    height:40px;
     display:block;
     position:absolute;
-    top:10px;
-    right: 10px;;
-  }
+    top: 0px;
+    left: 0px;
+    display: flex;
+    color: var(--white);
+}
+
+.app__menu .btn:hover{
+    background-color: var(--white);
+    color:var( --grayer);
+    transition: all 0.5s;
+    opacity: 1;
+}
+
+.modal__close .btn:hover{
+    background-color: var(--white);
+    color:var( --grayer);
+    transition: all 0.5s;
+    opacity: 1;
+}
+
+
+
+
+
