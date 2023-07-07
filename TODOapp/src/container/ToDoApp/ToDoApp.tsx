@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Button from "../../components/button/Button";
 import List from "../../components/list/list";
 import Modal from "../../components/modal/modal";
@@ -10,7 +10,7 @@ export default function ToDoApp(){
   console.log("www");
   const [jobs, setJobs] = useState("");
   
-  const btnTextAdd:string = "Add ToDo";
+  //const btnTextAdd:string = "Add ToDo";
   const btnTextDel:string = "Remove ToDos";
 
   const addToDo:VoidFunction = () => {
